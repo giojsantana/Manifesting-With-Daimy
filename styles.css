@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #5c7872;
+}
+
+/* NAV */
+
+.nav {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #a5d6cc;
+  padding: 1rem 4rem;
+  height: 7rem;
+}
+.nav-img {
+  width: 5rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  font-weight: 700;
+  color: #5c7872;
+  transition: all 200ms;
+}
+.nav-link:hover,
+.nav-link:active {
+  color: #88b0a8;
+}
+.nav-icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10rem;
+  background-color: #a5d6cc;
+  height: calc(100vh - 7rem);
+  text-align: center;
+}
+.slogan {
+  font-size: 6rem;
+}
+.header-sub-text {
+  margin-top: 4rem;
+  font-size: 3rem;
+  color: #5f7873;
+  font-weight: 500;
+  width: 70%;
+  margin: 2rem auto;
+}
+.header-img {
+  align-self: flex-end;
+  width: 25%;
+}
+.header-btn {
+  margin-top: 2rem;
+  font-size: 7rem;
+}
+
+/* VIDEO */
+.video .videoEl {
+  width: 100%;
+}
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  width: 100%;
+  height: 99.7%;
+  position: absolute;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #2e2e2eaf, #0000001e);
+}
+.video::after {
+  content: "The time has come to embody the light of the devine being that you truly are!";
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  top: 20rem;
+  left: 20rem;
+  font-weight: 600;
+  color: #f5ebc9;
+  font-size: 5rem;
+}
+
+/* ABOUT ME */
+.about-me--section {
+  background-color: #f5ebc9;
+  margin-top: -1rem;
+}
+.about-me--div {
+  display: flex;
+  align-items: center;
+}
+
+.about-me--img {
+  width: 20%;
+}
+
+/* UNIVERSAL */
+.section {
+  padding: 10rem;
+  padding-bottom: 0;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  background-color: #f6cdd5;
+  color: #c5a4aa;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  transition: all 300ms;
+}
+.btn:hover,
+.btn:active {
+  padding: 1.2rem;
+}
