@@ -1,139 +1,138 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-}
 body {
-  font-family: "Poppins", sans-serif;
-  color: #5c7872;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  background-color: #eefeff;
+  color: #404040;
+}
+.main {
+  margin: auto;
+  width: 70rem;
 }
 
 /* NAV */
-
 .nav {
-  font-size: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #a5d6cc;
-  padding: 1rem 4rem;
-  height: 7rem;
+  padding: 1.5rem 6rem;
 }
 .nav-img {
-  width: 5rem;
+  width: 3rem;
 }
 .nav-links {
+  font-size: 1rem;
   display: flex;
-  align-items: center;
   gap: 2rem;
+  align-items: center;
 }
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
-  font-weight: 700;
-  color: #5c7872;
-  transition: all 200ms;
+  color: #404040;
+  transition: all 300ms;
 }
 .nav-link:hover,
 .nav-link:active {
-  color: #88b0a8;
+  color: #9b9b9b;
+  transform: translateY(-10%);
 }
-.nav-icon {
-  width: 15px;
-  height: 15px;
+.btn {
+  color: #404040;
+  background-color: #f8c8dc;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-/* HEADER */
+/* HERO */
 
-.header {
+.hero-section {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  display: flex;
+  width: 100%;
+}
+.hero-div {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 10rem;
-  background-color: #a5d6cc;
-  height: calc(100vh - 7rem);
-  text-align: center;
+  gap: 3rem;
 }
-.slogan {
-  font-size: 6rem;
+.hero-img {
+  width: 20rem;
+  border-radius: 10px;
 }
-.header-sub-text {
-  margin-top: 4rem;
-  font-size: 3rem;
-  color: #5f7873;
-  font-weight: 500;
-  width: 70%;
-  margin: 2rem auto;
+.hero-txt {
+  width: 40rem;
 }
-.header-img {
-  align-self: flex-end;
-  width: 25%;
+.hero-title {
+  font-size: 4rem;
 }
-.header-btn {
+.hero-subtxt {
   margin-top: 2rem;
-  font-size: 7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
-/* VIDEO */
-.video .videoEl {
-  width: 100%;
-}
-.video {
-  position: relative;
-}
-.video::before {
-  content: "";
-  width: 100%;
-  height: 99.7%;
-  position: absolute;
-  left: 0;
-  background-image: linear-gradient(to bottom right, #2e2e2eaf, #0000001e);
-}
-.video::after {
-  content: "The time has come to embody the light of the devine being that you truly are!";
-  position: absolute;
-  width: 30%;
-  text-align: center;
-  top: 20rem;
-  left: 20rem;
-  font-weight: 600;
-  color: #f5ebc9;
-  font-size: 5rem;
-}
+/* INTRO */
 
-/* ABOUT ME */
-.about-me--section {
-  background-color: #f5ebc9;
-  margin-top: -1rem;
-}
-.about-me--div {
+.intro-section {
   display: flex;
   align-items: center;
 }
-
-.about-me--img {
-  width: 20%;
+.intro-title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+.intro-img {
+  width: 20rem;
+}
+.intro-txt {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
 }
 
-/* UNIVERSAL */
-.section {
-  padding: 10rem;
-  padding-bottom: 0;
+/* CARDS */
+.card-section {
+  margin-bottom: 20rem;
 }
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  background-color: #f6cdd5;
-  color: #c5a4aa;
-  padding: 1rem;
-  border-radius: 1.4rem;
-  transition: all 300ms;
+.card {
+  width: 100%;
+  height: 25rem;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
 }
-.btn:hover,
-.btn:active {
-  padding: 1.2rem;
+.card-flip {
+  transition: all 700ms;
+  background-color: #e2e4ff;
+  height: 100%;
+}
+.card-div {
+  display: flex;
+  gap: 3rem;
+}
+.card-title {
+  font-size: 3rem;
+  width: 50rem;
+  text-align: center;
+  margin: 10rem auto 5rem;
+}
+.card-img {
+  width: 100%;
+}
+.card-name {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+.card-hover {
+  transform: rotateY(180deg);
+}
+.card-name {
+  margin: auto;
 }
