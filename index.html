@@ -33,11 +33,13 @@
         <a class="nav-link" href="#"
           ><ion-icon name="logo-instagram"></ion-icon
         ></a>
-        <a class="nav-btn btn" href="#"> Book A Session</a>
+        <div class="btn-container">
+          <button class="nav-btn btn" href="#">Book A Session</button>
+        </div>
       </div>
     </nav>
     <main class="main">
-      <section class="hero-section">
+      <section class="hero-section section-gap">
         <div class="hero-div">
           <img src="imgs/hero.png" class="hero-img" />
           <div class="hero-txt">
@@ -49,53 +51,161 @@
           </div>
         </div>
       </section>
-      <section class="intro-section">
+      <section class="intro-section section-gap">
         <div class="intro-div">
           <h2 class="intro-title">Hi, Daimy here!</h2>
           <p class="intro-txt">
             I'm a spiritual coach committed to helping individuals on their
             journey to inner peace and fulfillment. As a spiritual coach, I
             believe that everyone has the power to reach their full potential
-            and live a life that aligns with their true purpose. Through various
-            techniques such as meditation, positive affirmations, and energy
-            healing, I will guide you towards discovering your inner self and
-            unlocking your true potential. Let's embark on this transformative
-            journey together!
+            and live a life that aligns with their true purpose.
+            <br /><br />Through various techniques such as meditation, positive
+            affirmations, and energy healing, I will guide you towards
+            discovering your inner self and unlocking your true potential. Let's
+            embark on this transformative journey together!
           </p>
         </div>
         <img src="imgs/about-img.png" class="intro-img" />
       </section>
-      <section class="card-section">
+      <section class="card-section section-gap">
         <h2 class="card-title">
           How can I help you to live a life of authentic joy
         </h2>
         <div class="card-div">
-          <div class="card">
-            <div class="card-flip">
-              <img class="card-img" src="imgs/card1.jpg" />
-              <p class="card-name">Live Coach</p>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <div class="card-img-div">
+                  <img class="card-img" src="imgs/card1.jpg" />
+                </div>
+                <p class="card-name">Live Coach</p>
+              </div>
+              <div class="card-back">
+                <p class="card-name card-txt">Back</p>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-flip">
-              <img class="card-img" src="imgs/card1.jpg" />
-              <p class="card-name">Live Coach</p>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <div class="card-img-div">
+                  <img class="card-img" src="imgs/card2.jpg" />
+                </div>
+                <p class="card-name">Live Coach</p>
+              </div>
+              <div class="card-back">
+                <p class="card-name card-txt">Back</p>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-flip">
-              <img class="card-img" src="imgs/card1.jpg" />
-              <p class="card-name">Live Coach</p>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <div class="card-img-div">
+                  <img class="card-img" src="imgs/card5.jpg" />
+                </div>
+                <p class="card-name">Live Coach</p>
+              </div>
+              <div class="card-back">
+                <p class="card-name card-txt">Back</p>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-flip">
-              <img class="card-img" src="imgs/card1.jpg" />
-              <p class="card-name">Live Coach</p>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-front">
+                <div class="card-img-div">
+                  <img class="card-img" src="imgs/card4.jpg" />
+                </div>
+                <p class="card-name">Live Coach</p>
+              </div>
+              <div class="card-back">
+                <p class="card-name card-txt">Back</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <section class="testimonials-section section-gap">
+        <h2 class="testimonials-title">Kind Words From My Clients</h2>
+        <div class="testimonial-div">
+          <button class="back-btn testimonial-btn">
+            <ion-icon
+              name="arrow-back-outline"
+              class="testimonial-btn--back"
+            ></ion-icon>
+          </button>
+          <button class="forward-btn testimonial-btn">
+            <ion-icon
+              name="arrow-forward-outline"
+              class="testimonial-btn--forward"
+            ></ion-icon>
+          </button>
+          <div class="testimonials">
+            <div class="testimonial">
+              <img class="testimonial-img" src="imgs/testimonial1.jpg" />
+              <h3 class="testimonial-insert">Insert</h3>
+              <p class="testimonial-txt">Main Text</p>
+            </div>
+            <div class="testimonial">
+              <img class="testimonial-img" src="imgs/testimonial1.jpg" />
+              <h3 class="testimonial-insert">Insert</h3>
+              <p class="testimonial-txt">Main Text</p>
+            </div>
+            <div class="testimonial">
+              <img class="testimonial-img" src="imgs/testimonial1.jpg" />
+              <h3 class="testimonial-insert">Insert</h3>
+              <p class="testimonial-txt">Main Text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-section section-gap">
+        <h3 class="cta-title">
+          I know where you're at in your spiritual rebirth journey
+        </h3>
+        <p class="cta-txt">
+          Are you feeling lost or disconnected on your spiritual journey? Let me
+          guide you towards greater clarity, purpose, and inner peace through my
+          personalized spiritual coaching services. <br /><br />
+          I am dedicated to helping you connect with your higher self and
+          achieve your desired spiritual goals. Book a session with me today and
+          take the first step towards a more fulfilling and meaningful life.
+        </p>
+        <div class="cta-box">
+          <h4 class="cta-box-title">
+            Are You Ready To Create The Life You Deserve
+          </h4>
+          <div class="btn-container">
+            <button class="cta-btn btn">Yes! I'm Ready</button>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer-section section-gap">
+      <div class="socials">
+        <h2 class="socials-title">Follow Me On</h2>
+        <div class="socials-div">
+          <a class="social-link" href="#"
+            ><ion-icon name="logo-tiktok"></ion-icon
+          ></a>
+          <a class="social-link" href="#"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h2 class="footer-title">Reawaken your authentic inner Hero!</h2>
+        <div class="footer-div">
+          <a class="footer-link" href="#">Services</a>
+          <a class="footer-link" href="#">FAQ</a>
+          <a class="footer-link" href="#">About Me</a>
+          <a class="footer-link" href="#">Contact</a>
+          <div class="btn-container footer-btn-container">
+            <button class="footer-btn btn">Book A Session</button>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
