@@ -71,7 +71,7 @@ testimonialBtnMore.forEach((btn) => {
     <div class="blur"></div>
     </div>
     `;
-    testimonialDiv.insertAdjacentHTML("afterend", html);
+    document.querySelector("main").insertAdjacentHTML("afterend", html);
     const popupDiv = document.querySelector(".popup-div");
     const testimonialPopup = document.querySelector(".testimonial-popup");
     const testimonialCloseBtn = document.querySelector(`.popup-close-btn`);
@@ -92,4 +92,23 @@ testimonialBtnMore.forEach((btn) => {
       body.style.overflow = "visible";
     });
   });
+});
+
+const sections = document.querySelectorAll(".section-gap");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio) {
+        entry.target.classList.add("section-load");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });

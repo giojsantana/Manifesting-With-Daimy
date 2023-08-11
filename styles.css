@@ -7,6 +7,7 @@ body {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
   color: #404040;
+  background-color: #97bed8;
 }
 .main {
   margin: auto;
@@ -18,6 +19,21 @@ body {
 .section-gap {
   width: 100%;
   padding: 10rem 25%;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: all 400ms;
+}
+.section-gap-hero {
+  width: 100%;
+  padding: 10rem 25%;
+}
+.section-load {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.img-blur {
+  background-size: cover;
+  background-position: center;
 }
 
 /* NAV */
