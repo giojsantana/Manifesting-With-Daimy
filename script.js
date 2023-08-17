@@ -94,21 +94,51 @@ testimonialBtnMore.forEach((btn) => {
   });
 });
 
-const sections = document.querySelectorAll(".section-gap");
+const texts = [...document.querySelectorAll("p")];
+texts.push([...document.querySelectorAll("h1")]);
+texts.push([...document.querySelectorAll("h2")]);
+texts.push([...document.querySelectorAll("h3")]);
+texts.push([...document.querySelectorAll("h4")]);
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio) {
-        entry.target.classList.add("section-load");
+        entry.target.classList.remove("hide-txt");
+        entry.target.classList.add("show-txt");
         observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.3,
+    threshold: 0,
   }
 );
 
-sections.forEach((section) => {
-  observer.observe(section);
+testimonials.forEach((testimonial, i) => {
+  if (i > 0) {
+    testimonial.classList.add("no-animation");
+  }
+});
+
+texts.flat().forEach((text) => {
+  console.log(text.parentElement.classList);
+  if (text.parentElement.classList.contains("no-animation")) {
+    return;
+  } else {
+    text.classList.add("hide-txt");
+    observer.observe(text);
+  }
+});
+
+const hamburgerBtn = document.querySelector(".hamburger");
+const closeBtn = document.querySelector(".close-hamburger");
+const nav = document.querySelector(".nav");
+
+hamburgerBtn.addEventListener("click", function () {
+  nav.classList.add("nav-active");
+  body.style.overflow = "hidden";
+});
+closeBtn.addEventListener("click", function () {
+  nav.classList.remove("nav-active");
+  body.style.overflow = "visible";
 });
