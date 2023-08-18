@@ -203,7 +203,7 @@ h4 {
   border-radius: 8px;
   overflow: hidden;
 }
-.card-container:hover .card {
+.card-active {
   transform: rotateY(180deg);
   cursor: pointer;
 }

@@ -157,3 +157,28 @@ hamburgerBtn.addEventListener("click", openNav);
 hamburgerBtn.addEventListener("touchend", openNav);
 closeBtn.addEventListener("click", closeNav);
 closeBtn.addEventListener("touchend", closeNav);
+
+const cardContainers = [...document.querySelectorAll(".card-container")];
+const cards = [...document.querySelectorAll(".card")];
+const cardFronts = [...document.querySelectorAll(".card-front")];
+const cardBacks = [...document.querySelectorAll(".card-back")];
+
+const cardOpen = function (i) {
+  cards[i].classList.add("card-active");
+};
+const cardClose = function (i) {
+  cards[i].classList.remove("card-active");
+};
+
+cardContainers.forEach((cardContainer, i) => {
+  cardContainer.addEventListener("mouseenter", cardOpen.bind(this, i));
+});
+cardContainers.forEach((cardContainer, i) => {
+  cardContainer.addEventListener("mouseleave", cardClose.bind(this, i));
+});
+cardFronts.forEach((front, i) => {
+  front.addEventListener("touchstart", cardOpen.bind(this, i));
+});
+cardBacks.forEach((back, i) => {
+  back.addEventListener("touchstart", cardClose.bind(this, i));
+});
