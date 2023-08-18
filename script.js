@@ -164,6 +164,9 @@ const cardFronts = [...document.querySelectorAll(".card-front")];
 const cardBacks = [...document.querySelectorAll(".card-back")];
 
 const cardOpen = function (i) {
+  cards.forEach((card) => {
+    card.classList.remove("card-active");
+  });
   cards[i].classList.add("card-active");
 };
 const cardClose = function (i) {
