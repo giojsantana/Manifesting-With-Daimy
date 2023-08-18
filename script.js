@@ -143,12 +143,10 @@ const closeBtn = document.querySelector(".close-hamburger");
 const nav = document.querySelector(".nav");
 
 const openNav = function () {
-  console.log("open");
   nav.classList.add("nav-active");
   body.style.overflow = "hidden";
 };
 const closeNav = function () {
-  console.log("close");
   nav.classList.remove("nav-active");
   body.style.overflow = "visible";
 };
