@@ -230,6 +230,9 @@ h4 {
 .card3 {
   transform: translateY(-25%);
 }
+.card-back .card-txt {
+  user-select: none;
+}
 
 /* TESTIMONIALS */
 
