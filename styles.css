@@ -691,7 +691,13 @@ h4 {
 
 @media (max-width: 510px) {
   .testimonial-popup-active {
-    padding: 5rem 2.5%;
+    padding: 2rem 2.5%;
+  }
+  .testimonial-insert--popup {
+    font-size: 1.2rem;
+  }
+  .testimonial-txt--popup {
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 360px) {
