@@ -79,7 +79,6 @@ testimonialBtnMore.forEach((btn) => {
     popupDiv.style.display = "block";
 
     setTimeout(function () {
-      console.log("hello");
       testimonialPopup.classList.add("testimonial-popup-active");
     }, 10);
 
@@ -120,8 +119,17 @@ testimonials.forEach((testimonial, i) => {
   }
 });
 
+const mobileTxtTestimonial = document.querySelectorAll(
+  ".testimonial-txt--mobile"
+);
+
+mobileTxtTestimonial.forEach((testimonial, i) => {
+  if (i > 0) {
+    testimonial.classList.add("no-anim");
+  }
+});
+
 texts.flat().forEach((text) => {
-  console.log(text.parentElement.classList);
   if (text.parentElement.classList.contains("no-animation")) {
     return;
   } else {
@@ -134,11 +142,18 @@ const hamburgerBtn = document.querySelector(".hamburger");
 const closeBtn = document.querySelector(".close-hamburger");
 const nav = document.querySelector(".nav");
 
-hamburgerBtn.addEventListener("click", function () {
+const openNav = function () {
+  console.log("open");
   nav.classList.add("nav-active");
   body.style.overflow = "hidden";
-});
-closeBtn.addEventListener("click", function () {
+};
+const closeNav = function () {
+  console.log("close");
   nav.classList.remove("nav-active");
   body.style.overflow = "visible";
-});
+};
+
+hamburgerBtn.addEventListener("click", openNav);
+hamburgerBtn.addEventListener("touchend", openNav);
+closeBtn.addEventListener("click", closeNav);
+closeBtn.addEventListener("touchend", closeNav);
