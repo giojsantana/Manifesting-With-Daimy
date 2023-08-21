@@ -53,13 +53,21 @@ h4 {
 .popup-close-btn {
   color: #404040;
 }
+.fixed {
+  position: fixed;
+}
 
 /* NAV */
 .nav {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 6rem;
-  background-color: #cbb09a;
+  background-color: none;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
 }
 .nav-img {
   width: 3rem;
@@ -73,7 +81,7 @@ h4 {
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
-  color: #2c2c2c;
+  color: #404040;
   transition: all 300ms;
 }
 .nav-link:hover,
@@ -126,9 +134,24 @@ h4 {
   padding-top: 8rem;
   display: flex;
   background-color: #cbb09a;
-  /* color: #fcf8f5; */
+  color: #fcf8f5;
   position: relative;
-  height: 95vh;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-background {
+  background-image: url("imgs/heroback.jpg");
+  background-attachment: fixed;
+  filter: brightness(130%);
+  background-size: cover;
+  background-position: 25% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-size: 160%;
 }
 .hero-div {
   display: flex;
@@ -139,17 +162,20 @@ h4 {
   width: 50%;
   border-radius: 10px;
   box-shadow: 12px 29px 81px 0px rgba(8, 8, 8, 0.75);
-  transform: rotate(-10deg);
+  transform: rotate(10deg);
+  margin-left: 5rem;
 }
 .hero-txt {
-  width: 40rem;
+  width: 50rem;
+  margin-top: 20rem;
 }
 .hero-title {
-  font-size: 3.4rem;
+  font-size: 4.4rem;
+  filter: brightness(100%);
 }
 .hero-subtxt {
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -165,9 +191,6 @@ h4 {
   font-size: 3rem;
   margin-bottom: 2.5rem;
 }
-.intro-img {
-  width: 20rem;
-}
 .intro-txt {
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -175,7 +198,7 @@ h4 {
 
 /* CARDS */
 .card-section {
-  background-color: #97bed8;
+  background-color: #cbb09a;
 }
 .card-div {
   display: grid;
@@ -193,7 +216,7 @@ h4 {
 }
 .card-front,
 .card-back {
-  background-color: #cbb09a;
+  background-color: #fff5e2;
   height: 25rem;
   position: absolute;
   width: 100%;
@@ -236,7 +259,27 @@ h4 {
 .card3 {
   transform: translateY(-25%);
 }
+.card-flip-icon {
+  font-size: 2rem;
+  color: #404040;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
 
+.buffer-div {
+  height: 20rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.buffer {
+  height: 20rem;
+  width: 100vw;
+  background-image: url("imgs/buffer-img.jpg");
+  background-position: 50% 68%;
+  background-attachment: fixed;
+}
 /* TESTIMONIALS */
 
 .testimonials-section {
@@ -574,6 +617,7 @@ h4 {
   .nav,
   .nav-links {
     flex-direction: column;
+    background-color: #cbb09a;
   }
   .nav-img {
     margin: 2rem auto;
@@ -584,18 +628,12 @@ h4 {
   .close-hamburger {
     display: inline-block;
   }
-  .hero-section {
-    height: fit-content;
-    justify-content: center;
-    text-align: center;
-  }
   .hero-div {
     flex-direction: column;
   }
   .hero-img {
     order: 1;
-    width: 70%;
-    transform: rotate(0);
+    width: 40%;
   }
   .hero-title {
     font-size: 3rem;
@@ -610,6 +648,28 @@ h4 {
   .testimonial-popup {
     width: 80vw;
   }
+  .hero-section {
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-background {
+    background-position: 60% 0%;
+    background-size: cover;
+    filter: brightness(100%);
+  }
+}
+@media (max-width: 1000px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    transform: rotate(0);
+    margin-top: 5rem;
+    margin-left: 0;
+    width: 25rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -620,10 +680,6 @@ h4 {
   .card-container {
     width: 100%;
     margin: auto;
-  }
-  .intro-section {
-    flex-direction: column;
-    text-align: center;
   }
   .footer-section,
   .socials-div {
@@ -685,6 +741,9 @@ h4 {
   .div-center {
     grid-row: 3/4;
   }
+  .hero-background {
+    background-position: 55% 0%;
+  }
 }
 
 @media (max-width: 690px) {
@@ -704,6 +763,9 @@ h4 {
   }
   .testimonial-txt--popup {
     font-size: 0.9rem;
+  }
+  .hero-img {
+    width: 95%;
   }
 }
 @media (max-width: 360px) {
