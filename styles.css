@@ -746,10 +746,7 @@ h4 {
   }
   .hero-background,
   .buffer {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-attachment: initial;
   }
 }
 
