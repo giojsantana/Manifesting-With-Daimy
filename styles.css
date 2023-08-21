@@ -744,6 +744,13 @@ h4 {
   .hero-background {
     background-position: 55% 0%;
   }
+  .hero-background,
+  .buffer {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 @media (max-width: 690px) {
