@@ -451,6 +451,22 @@ h4 {
   margin: auto;
   text-align: center;
 }
+.testimonial-video-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.testimonial-video {
+  border: 1px solid #000;
+}
+.testimonial-video-author {
+  color: #6b6b6b;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 
 /* CTA */
 .cta-section {
