@@ -460,6 +460,7 @@ h4 {
 }
 .testimonial-video {
   border: 1px solid #000;
+  background-image: url(imgs/videoImg.PNG);
 }
 .testimonial-video-author {
   color: #6b6b6b;
